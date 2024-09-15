@@ -1,0 +1,52 @@
+  #container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: transparent; /* Dark background for modern look */
+    color: white; /* Text color */
+    height: 15vh;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  }
+  
+  #header {
+    display: flex;
+    align-items: center;
+  }
+  
+  #header img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+    background-color: transparent;
+    margin-right: 1rem; /* Adds space between logo and title */
+  }
+  
+  #header h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  #btn {
+    display: flex;
+    gap: 1rem; /* Adds space between buttons */
+  }
+  
+  #btn button {
+    padding: 0.7rem 1.5rem; /* More padding for better click area */
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 25px; /* Rounded corners for a modern look */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+    cursor: pointer;
+  }
+  
+  #btn button:hover {
+    background-color: white;
+    color: #282c34; /* Inverse colors on hover */
+  }
+  

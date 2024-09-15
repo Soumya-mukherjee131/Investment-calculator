@@ -1,0 +1,64 @@
+
+   let intervalID;
+
+  const startingLoop = () =>{
+    let count = 0
+    intervalID = setInterval(() =>{
+      if(count<=200){
+        document.getElementById(styles.res).textContent = `The result is ${count}`;
+        count++
+      }
+      else{
+        clearInterval(intervalID);
+      }
+    }, 10)
+  };
+
+  const stopingLoop = () => {
+    clearInterval(intervalID);
+  }
+
+  return (
+    <div className={styles.container}>
+      <button id={styles.btn} onClick={startingLoop}>Start</button>
+      <button id={styles.btn} onClick={stopingLoop}>Stop</button>
+      <label>Result-</label>
+      <div id={styles.res}></div>
+    </div>
+
+  )
+
+
+
+  ///////////////////////////////////////////////////////
+  .container{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* border: 2px solid red; */
+    gap: 20px;
+    height: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+}
+#btn{
+    height: 10vh;
+    width: 30%;
+    margin: 10px;
+    font-size: 30px;
+    background-color: rgba(7,7,37);
+    color: white;
+    cursor: pointer;
+}
+#btn:hover{
+    color: rgb(241, 93, 113);
+    font-size: 35px;
+    /* height: 11vh; */
+    /* width: 31%; */
+}
+#res{
+    border: 2px dotted black;
+    height: 5vh;
+    width: 50%;
+}
